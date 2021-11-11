@@ -58,7 +58,7 @@ function App() {
   async function handleRequestToApi() {
     try {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchPokemon || 'pikachu'}`);
-      const { name, sprites: { other }, abilities } = await response.json();
+      const { name, sprites: { other }, abilities } = await response.json()
       const { dream_world: { front_default } } = other;
 
       const currentPokemon = {
